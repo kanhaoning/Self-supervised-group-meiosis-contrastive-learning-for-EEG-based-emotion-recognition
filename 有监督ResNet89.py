@@ -95,7 +95,7 @@ for epoch in range(1, epochs+1):
     train_acces.extend(train_acces_tem)
     train_losses.extend(train_losses_tem)
 
-    #测试一次
+    ##测试一次
     model.eval()
     total_loss = 0
     total_acc = 0
