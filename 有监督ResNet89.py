@@ -43,7 +43,7 @@ train_acces = []
 test_losses = []
 
 
-#先进行一次测试集测试
+##先进行一次测试集测试##
 model.eval()
 total_loss = 0
 total_acc = 0
@@ -68,7 +68,7 @@ test_acces = [test_acc]
 test_losses = [test_loss]
 print(f'Epoch {0}, Test loss {test_loss:.4f}, Test acc {test_acc:.4f}')
 
-#开始训练
+##开始训练##
 train_losses = []
 train_acces = []
 for epoch in range(1, epochs+1):
