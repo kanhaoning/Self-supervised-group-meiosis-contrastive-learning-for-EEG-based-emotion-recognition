@@ -39,7 +39,7 @@ def feature_normalize(data):
 #function of getting EEG windon
 def windows(data, size):
     start = 0
-    while ((start + size) < data.shape[0]):
+    while ((start + size) <= data.shape[0]):
         yield int(start), int(start + size)
         start += size
 
@@ -52,9 +52,7 @@ def segment_signal_without_transition(data,label,label_index,window_size):
         if ((len(data[start:end]) == window_size)):
             if(start == 0):
                 segments = data[start:end]
-                segments = np.vstack([segments, data[start:end]])
                 labels = np.array(label[label_index])
-                labels = np.append(labels, np.array(label[label_index]))
                 print('label:', labels)
             else:
                 segments = np.vstack([segments, data[start:end]])
